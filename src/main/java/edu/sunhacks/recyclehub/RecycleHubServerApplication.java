@@ -1,4 +1,4 @@
-package edu.sunhacks.recyclehub.RecycleHubServer;
+package edu.sunhacks.recyclehub;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
