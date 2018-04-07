@@ -21,24 +21,8 @@ public class Product {
 	private String landfillGarbage;
 	private List<State> states;
 	
-	
-	
-	public Product(String id, String pid, String productName, String garbageGenerated, String recycleableGarbage,
-			String landfillGarbage, List<State> states) {
-		super();
-		this.id = id;
-		this.pid = pid;
-		this.productName = productName;
-		this.garbageGenerated = garbageGenerated;
-		this.recycleableGarbage = recycleableGarbage;
-		this.landfillGarbage = landfillGarbage;
-		this.states = states;
-	}
 	public String getId() {
 		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public String getPid() {
 		return pid;
