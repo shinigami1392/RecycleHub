@@ -53,6 +53,5 @@ public class Product {
 	public void setValue(String value) {
 		this.value = value;
 	}
-	
-	
+
 }
