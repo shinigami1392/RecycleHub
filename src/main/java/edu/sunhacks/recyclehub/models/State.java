@@ -3,7 +3,9 @@ package edu.sunhacks.recyclehub.models;
 public class State {
 	private String name;
 	private String value;
-	
+
+	public State() {}
+
 	public State(String name, String value) {
 		super();
 		this.name = name;

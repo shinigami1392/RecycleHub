@@ -34,11 +34,11 @@ public class UserController {
             uCred.setUsername((String)map.getOrDefault("username", ""));
             uCred.setPassword((String)map.getOrDefault("password", ""));
 
-            responseDB = userService.authenticateUser(uCred);
-            if(responseDB){
-                HttpSession session = request.getSession();
-                PLPUserDB.getInstance().registerUserSession(uCred.getUsername(), session, session.getId());
-            }
+//            responseDB = userService.authenticateUser(uCred);
+//            if(responseDB){
+//                HttpSession session = request.getSession();
+//                PLPUserDB.getInstance().registerUserSession(uCred.getUsername(), session, session.getId());
+//            }
         } catch (JsonGenerationException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {
