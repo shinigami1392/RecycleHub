@@ -22,22 +22,6 @@ public class Product {
 	private String landfillGarbage;
 	private List<State> states;
 
-
-	public Product() {
-		this.states = new ArrayList<State>();
-	}
-
-	public Product(String pid, String productName, String garbageGenerated, String recycleableGarbage,
-			String landfillGarbage, List<State> states) {
-		super();
-		this.pid = pid;
-		this.productName = productName;
-		this.garbageGenerated = garbageGenerated;
-		this.recycleableGarbage = recycleableGarbage;
-		this.landfillGarbage = landfillGarbage;
-		this.states = states;
-	}
-
 	public String getId() {
 		return id;
 	}
