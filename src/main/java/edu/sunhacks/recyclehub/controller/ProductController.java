@@ -30,7 +30,6 @@ public class ProductController {
 	public List<Product> findByIds(@RequestParam("id") String[] ids){
 		System.err.println("IN IDS: "+Arrays.toString(ids));
 		return new ArrayList<Product>();
-		//return (List<Product>) productRepository.findAllById(Arrays.ite);
 	}
 
 }
