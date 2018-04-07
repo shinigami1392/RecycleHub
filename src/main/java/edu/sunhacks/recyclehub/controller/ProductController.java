@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import edu.sunhacks.recyclehub.models.ProductRepository;
 
-@RestController
-@RequestMapping("/product")
+
 public class ProductController {
-	@Autowired
-	ProductRepository productRepository;
+	
 
 }
