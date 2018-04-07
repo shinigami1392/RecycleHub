@@ -1,51 +1,51 @@
 [{
    "pid": 71990095116,
    "productName": "12 LIQUID OUNCES BLUEMOON BEER 6PK",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-   "StateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+   "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
  },
 {
    "pid": 71990095161,
    "productName": "12 LIQUID OUNCES BLUEMOON BEER 12PK",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.6,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.6,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.006   
+         "name": "AZ",
+         "value": 0.006   
       },
       {
-         "State": "CA",
-         "Value": 0.007   
+         "name": "CA",
+         "value": 0.007   
       }
    ]
  },
  {
    "pid": 44000039035,
    "productName": "150 GRAMS OJO COCONUT COOKIES",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -53,17 +53,17 @@
  {
    "pid": 44000007492,
    "productName": "5.2 OUNCES (NET) OREO COOKIE 5.25OZ",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -71,17 +71,17 @@
  {
    "pid": 44000007522,
    "productName": "6 OUNCES (NET) CHIPS AHOY CKIES 6OZ",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -89,17 +89,17 @@
  {
    "pid": 44000025885,
    "productName": "14 OUNCES (NET) CHIPSAHOY MEGA FUDGE",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -107,17 +107,17 @@
  {
    "pid": 44000027346,
    "productName": "11 OUNCES (NET) NILLA WAFERS 11OZ",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -125,17 +125,17 @@
  {
    "pid": 44000030377,
    "productName": "9.1 OUNCES (NET) NABISCO WHEAT THINS",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -143,17 +143,17 @@
  {
    "pid": 44000030490,
    "productName": "7.5 OUNCES (NET) CHCKN N'BISKIT 7.5OZ",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -161,17 +161,17 @@
  {
    "pid": 44000030667,
    "productName": "8 OUNCES (NET) NABISCO FIG NWTN 8OZ",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -179,17 +179,17 @@
  {
    "pid": 44000031114,
    "productName": "13.7 OUNCES (NET) RITZ CRACERS 13.7OZ",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -197,17 +197,17 @@
  {
    "pid": 767914035008,
    "productName": "1.5 DOZEN ROSEMRY EGGS 18CT(L)",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -215,17 +215,17 @@
  {
    "pid": 8850649005148,
    "productName": "7 OUNCES (NET) LC QUAIL EGGS 7OZ",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -233,17 +233,17 @@
  {
    "pid": 8504692051590,
    "productName": "15 LIQUID OUNCES SIAM QUAIL EGGS 15OZ",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -251,17 +251,17 @@
  {
    "pid": 4713648920727,
    "productName": "10 Oz Digital Media Source leather multi-view case/folio for ipad",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -269,17 +269,17 @@
  {
    "pid": 4713648920734,
    "productName": "10 Oz Digital Media Source leather multi-view case/folio for ipad (Red)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -287,17 +287,17 @@
  {
    "pid": 4713648920741,
    "productName": "10 Oz Digital Media Source leather multi-view case/folio for ipad (White)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -305,17 +305,17 @@
  {
    "pid": 4713648920758,
    "productName": "10 Oz Digital Media Source leather multi-view case/folio for ipad (Brown)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -323,17 +323,17 @@
  {
    "pid": 4713648920925,
    "productName": "8 OZ Digital Media Source Bluetooth Wireless Keyboard for ipad",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -341,17 +341,17 @@
  {
    "pid": 4713648920932,
    "productName": "10 OZ Digital Media Source Leather Convertible Book Jacket for ipad (Black)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -359,17 +359,17 @@
  {
    "pid": 4713648920949,
    "productName": "10 Oz Digital Media Source Leather Convertible Book Jacket for ipad (Red)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -377,17 +377,17 @@
  {
    "pid": 4713648920956,
    "productName": "10 Oz Digital Media Source Leather Convertible Book Jacket for ipad (Brown)",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -395,17 +395,17 @@
  {
    "pid": 3980003678,
    "productName": "9V 9V Battery",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.6,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.6,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.006   
+         "name": "AZ",
+         "value": 0.006   
       },
       {
-         "State": "CA",
-         "Value": 0.007   
+         "name": "CA",
+         "value": 0.007   
       }
    ]
    
@@ -413,17 +413,17 @@
  {
    "pid": 799439059535,
    "productName": "Swiss Reimagined 4 Pin Watch Case or Movement Holder to Aid Watch Repair or Changing Watch Battery",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.6,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.6,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.006   
+         "name": "AZ",
+         "value": 0.006   
       },
       {
-         "State": "CA",
-         "Value": 0.007   
+         "name": "CA",
+         "value": 0.007   
       }
    ]
    
@@ -431,17 +431,17 @@
  {
    "pid": 797776042876,
    "productName": "Xintec Enterprise (HK) Limited Portable Power Battery 2200mAh",
-   "Garbage Generated": 0.7,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.4,
-    "stateVal":[
+   "garbageGenerated": 0.7,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.4,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -449,17 +449,17 @@
  {
    "pid": 4133366379,
    "productName": "Duracell 48 Duracell AA Batteries",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.6,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.6,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.006   
+         "name": "AZ",
+         "value": 0.006   
       },
       {
-         "State": "CA",
-         "Value": 0.007   
+         "name": "CA",
+         "value": 0.007   
       }
    ]
    
@@ -467,17 +467,17 @@
  {
    "pid": 4133327035,
    "productName": "Duracell 24 alkaline batteries Duracell",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.6,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.6,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.006   
+         "name": "AZ",
+         "value": 0.006   
       },
       {
-         "State": "CA",
-         "Value": 0.007   
+         "name": "CA",
+         "value": 0.007   
       }
    ]
    
@@ -485,17 +485,17 @@
  {
    "pid": 19200000512,
    "productName": "1.5 OUNCES (NET) DCON MOUSE POISON BX",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -503,17 +503,17 @@
  {
    "pid": 884483195954,
    "productName": "5 pounds Acer 21.5\" monitor 1080p",
-   "Garbage Generated": 3,
-   "Recycleable Garbage": 2,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 3,
+   "recycleableGarbage": 2,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -521,17 +521,17 @@
  {
    "pid": 884483236404,
    "productName": "Acer Aspire AS6930-6455 PC Notebook",
-   "Garbage Generated": 4,
-   "Recycleable Garbage": 3,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 4,
+   "recycleableGarbage": 3,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -539,17 +539,17 @@
  {
    "pid": 884483643202,
    "productName": "14.57\"h x 14.80\"w 8.27lbs Acer V173 Bbm LCD Monitor w/ Built-in Speakers",
-   "Garbage Generated": 3,
-   "Recycleable Garbage": 2,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 3,
+   "recycleableGarbage": 2,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -557,17 +557,17 @@
  {
    "pid": 883929098279,
    "productName": "DVD Harry Potter and the Half-Blood Prince (Rental edition)",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -575,17 +575,17 @@
  {
    "pid": 883929098514,
    "productName": "DVD The Hills Run Red",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -593,17 +593,17 @@
  {
    "pid": 883929100415,
    "productName": "The Waltons Movie Collection",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -611,17 +611,17 @@
  {
    "pid": 883929105731,
    "productName": "Edge of Darkness Blu-Ray",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -629,17 +629,17 @@
  {
    "pid": 883929111282,
    "productName": "The HANGOVER DVD",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -647,17 +647,17 @@
  {
    "pid": 883929119257,
    "productName": "Ninja Assasin DVD",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -665,17 +665,17 @@
  {
    "pid": 883948953276,
    "productName": "9.5 Adidas Top Ten Lo Sneakers",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -683,17 +683,17 @@
  {
    "pid": 883971334905,
    "productName": "03 blonde nites",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -701,17 +701,17 @@
  {
    "pid": 884118048785,
    "productName": "food processor",
-   "Garbage Generated": 2,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 1,
-    "stateVal":[
+   "garbageGenerated": 2,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -719,17 +719,17 @@
  {
    "pid": 64541318123,
    "productName": "mcneil hazelnut splenda flavours for coffee",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -737,17 +737,17 @@
  {
    "pid": 64541318109,
    "productName": "mcneil french vanilla splenda flavours for coffee",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -755,17 +755,17 @@
  {
    "pid": 9310036038276,
    "productName": "Ice coffee",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -773,17 +773,17 @@
  {
    "pid": 9312469071530,
    "productName": "355ml bowl",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -791,17 +791,17 @@
  {
    "pid": 790507904344,
    "productName": "7 inches/5 ounces Aluminum Water Bottle",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -809,17 +809,17 @@
  {
    "pid": 639277030344,
    "productName": "12.4 oz Glass Paper Weight ASMT- FISH",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -827,17 +827,17 @@
  {
    "pid": 639277032973,
    "productName": "16 oz water bottle",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -845,17 +845,17 @@
  {
    "pid": 609613831850,
    "productName": "Sportline Orange Colour Hydracoach Intelligent Water Bottle",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -863,17 +863,17 @@
  {
    "pid": 182000001192,
    "productName": "20 fl oz Aquafina water bottle",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -881,17 +881,17 @@
  {
    "pid": 40901101017,
    "productName": "Kentucky Enquirer Newspaper",
-   "Garbage Generated": 0,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -899,17 +899,17 @@
  {
    "pid": 40901120025,
    "productName": "greenviille news, greenville sc",
-   "Garbage Generated": 0,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -917,17 +917,17 @@
  {
    "pid": 40901122012,
    "productName": "asheville citizens-times news paper",
-   "Garbage Generated": 0,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -935,17 +935,17 @@
  {
    "pid": 88170809412,
    "productName": "Analog watch",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.3,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.3,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -953,17 +953,17 @@
  {
    "pid": 691464920500,
    "productName": "fossil watch",
-   "Garbage Generated": 0.8,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.3,
-    "stateVal":[
+   "garbageGenerated": 0.8,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.3,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -971,17 +971,17 @@
  {
    "pid": 879957005839,
    "productName": "dyson vacuum",
-   "Garbage Generated": 3,
-   "Recycleable Garbage": 2,
-   "Landfill Garbage": 1,
-    "stateVal":[
+   "garbageGenerated": 3,
+   "recycleableGarbage": 2,
+   "landfillGarbage": 1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.02   
+         "name": "AZ",
+         "value": 0.02   
       },
       {
-         "State": "CA",
-         "Value": 0.03   
+         "name": "CA",
+         "value": 0.03   
       }
    ]
 
@@ -989,17 +989,17 @@
  {
    "pid": 610373410537,
    "productName": "EZER CAR VACUUM CLEANER",
-   "Garbage Generated": 3,
-   "Recycleable Garbage": 2,
-   "Landfill Garbage": 1,
-    "stateVal":[
+   "garbageGenerated": 3,
+   "recycleableGarbage": 2,
+   "landfillGarbage": 1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.02   
+         "name": "AZ",
+         "value": 0.02   
       },
       {
-         "State": "CA",
-         "Value": 0.03   
+         "name": "CA",
+         "value": 0.03   
       }
    ]
 
@@ -1007,17 +1007,17 @@
  {
    "pid": 823233935488,
    "productName": "Nike shoe",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1025,17 +1025,17 @@
  {
    "pid": 4850462760419,
    "productName": "Boys Trousers",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1043,17 +1043,17 @@
  {
    "pid": 4850472730419,
    "productName": "Boys Clothes",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1061,17 +1061,17 @@
  {
    "pid": 827585214116,
    "productName": "Clothes",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1079,17 +1079,17 @@
  {
    "pid": 827783567182,
    "productName": "Hugo Boss",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1097,17 +1097,17 @@
  {
    "pid": 811127010588,
    "productName": "Glasses",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1115,17 +1115,17 @@
  {
    "pid": 70135588179,
    "productName": "sunglasses",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1133,17 +1133,17 @@
  {
    "pid": 66699510279,
    "productName": "girls shirt",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1151,17 +1151,17 @@
  {
    "pid": 1491601779,
    "productName": "Amazon Kindle",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1169,17 +1169,17 @@
  {
    "pid": 711719100348,
    "productName": "Sony PlayStation 4",
-   "Garbage Generated": 2,
-   "Recycleable Garbage": 1.8,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 2,
+   "recycleableGarbage": 1.8,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.02   
+         "name": "AZ",
+         "value": 0.02   
       },
       {
-         "State": "CA",
-         "Value": 0.03   
+         "name": "CA",
+         "value": 0.03   
       }
    ]
 
@@ -1187,17 +1187,17 @@
  {
    "pid": 88590957518,
    "productName": "Apple iPad",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1205,17 +1205,17 @@
  {
    "pid": 277045,
    "productName": "Ceiling fan",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1223,17 +1223,17 @@
  {
    "pid": 88622738055,
    "productName": "Notebook",
-   "Garbage Generated": 0,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1241,17 +1241,17 @@
  {
    "pid": 19080300580,
    "productName": "Book",
-   "Garbage Generated": 0,
-   "Recycleable Garbage": 0,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0,
+   "recycleableGarbage": 0,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1259,17 +1259,17 @@
  {
    "pid": 705954604921,
    "productName": "BEST CASE AND ACCESSORIES, INC. Flip Phone Compatible Flip Phone Cellphone Case",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1277,17 +1277,17 @@
  {
    "pid": 705954032113,
    "productName": "BEST CASE AND ACCESSORIES, INC. just wireless ultra mobile charger (motorola)",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1295,17 +1295,17 @@
  {
    "pid": 4712206400374,
    "productName": "1GB Apacer USB 2.0 Flash Drive",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1313,17 +1313,17 @@
  {
    "pid": 34909212240,
    "productName": "32\" RCA Stereo Television Silver Finish",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1331,17 +1331,17 @@
  {
    "pid": 34909311950,
    "productName": "24\" Screen RCA Color Stereo Television Silver Finish Model 24V510T",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1349,17 +1349,17 @@
  {
    "pid": 34909312827,
    "productName": "27\" Screen RCA Color Stereo Television Black Finish Model 27V510T",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1367,17 +1367,17 @@
  {
    "pid": 34909320211,
    "productName": "RCA Silver DVD Player Model DRC240N",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1385,17 +1385,17 @@
  {
    "pid": 672733202220,
    "productName": "6 1/2 IN x 5 7/8 IN BRAWNY ESSENTIAL- plastic bags",
-   "Garbage Generated": 0.003,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.003,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1403,17 +1403,17 @@
  {
    "pid": 11217986131,
    "productName": "brute plastic bags 20gallons",
-   "Garbage Generated": 0.003,
-   "Recycleable Garbage": 0.025,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.003,
+   "recycleableGarbage": 0.025,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0025   
+         "name": "AZ",
+         "value": 0.0025   
       },
       {
-         "State": "CA",
-         "Value": 0.0030   
+         "name": "CA",
+         "value": 0.0030   
       }
    ]
 
@@ -1421,17 +1421,17 @@
  {
    "pid": 11217991418,
    "productName": "variety pack containers",
-   "Garbage Generated": 0.5,
-   "Recycleable Garbage": 0.2,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.5,
+   "recycleableGarbage": 0.2,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1439,17 +1439,17 @@
  {
    "pid": 11200004491,
    "productName": "jeans",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1457,17 +1457,17 @@
  {
    "pid": 11153048504,
    "productName": "salsa",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1475,17 +1475,17 @@
  {
    "pid": 11153072981,
    "productName": "yogurt",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.001,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.001,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0001   
+         "name": "AZ",
+         "value": 0.0001   
       },
       {
-         "State": "CA",
-         "Value": 0.0002  
+         "name": "CA",
+         "value": 0.0002  
       }
    ]
 
@@ -1493,17 +1493,17 @@
  {
    "pid": 11153207024,
    "productName": "tissue",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0002   
+         "name": "AZ",
+         "value": 0.0002   
       },
       {
-         "State": "CA",
-         "Value": 0.0003  
+         "name": "CA",
+         "value": 0.0003  
       }
    ]
 
@@ -1511,17 +1511,17 @@
  {
    "pid": 11166021440,
    "productName": "ketchup",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1529,17 +1529,17 @@
  {
    "pid": 5060011860883,
    "productName": "Pressure Dies Limited 4 rolls Majestic Kitchen Rolls",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0002   
+         "name": "AZ",
+         "value": 0.0002   
       },
       {
-         "State": "CA",
-         "Value": 0.0003  
+         "name": "CA",
+         "value": 0.0003  
       }
    ]
 
@@ -1547,17 +1547,17 @@
  {
    "pid": 70030168711,
    "productName": "Dollar General 100 Tablets Essential Multiple Vitamins",
-   "Garbage Generated": 0.4,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.2,
-    "stateVal":[
+   "garbageGenerated": 0.4,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.2,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1565,17 +1565,17 @@
  {
    "pid": 600552011846,
    "productName": "Elite Series 3PK Gel Pens",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1583,17 +1583,17 @@
  {
    "pid": 856006003039,
    "productName": "40 COUNT SECURE ENVELOPE 40CT",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0002   
+         "name": "AZ",
+         "value": 0.0002   
       },
       {
-         "State": "CA",
-         "Value": 0.0003  
+         "name": "CA",
+         "value": 0.0003  
       }
    ]
 
@@ -1601,17 +1601,17 @@
  {
    "pid": 871936002112,
    "productName": "50 COUNT MAIL ENVELOPE 50CT",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1619,17 +1619,17 @@
  {
    "pid": 871936002129,
    "productName": "100 COUNT WHITE ENVELOPE 100CT",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1637,17 +1637,17 @@
  {
    "pid": 871936002136,
    "productName": "40 COUNT SECURE ENVELOPE 40CT",
-   "Garbage Generated": 0.02,
-   "Recycleable Garbage": 0.02,
-   "Landfill Garbage": 0,
-    "stateVal":[
+   "garbageGenerated": 0.02,
+   "recycleableGarbage": 0.02,
+   "landfillGarbage": 0,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.002   
+         "name": "AZ",
+         "value": 0.002   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1655,17 +1655,17 @@
  {
    "pid": 5150099283,
    "productName": "CRISCO VEGETABLE OIL",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.003   
+         "name": "CA",
+         "value": 0.003   
       }
    ]
 
@@ -1673,17 +1673,17 @@
  {
    "pid": 4274328035,
    "productName": "EM VEGETABLE OIL 1L",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1691,17 +1691,17 @@
  {
    "pid": 35826004109,
    "productName": "48.00 OZ FL VEGETABLE OIL",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1709,17 +1709,17 @@
  {
    "pid": 35826004116,
    "productName": "128.00 OZ FL VEGETABLE OIL",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
 
@@ -1727,17 +1727,17 @@
  {
    "pid": 77890453988,
    "productName": "1 Gallon / 3.78 L Canola Oil",
-   "Garbage Generated": 0.3,
-   "Recycleable Garbage": 0.1,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.3,
+   "recycleableGarbage": 0.1,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.001   
+         "name": "AZ",
+         "value": 0.001   
       },
       {
-         "State": "CA",
-         "Value": 0.002   
+         "name": "CA",
+         "value": 0.002   
       }
    ]
 
@@ -1745,17 +1745,17 @@
  {
    "pid": 180465798275,
    "productName": "Headphones",
-   "Garbage Generated": 0.1,
-   "Recycleable Garbage": 0.25,
-   "Landfill Garbage": 0.5,
-    "stateVal":[
+   "garbageGenerated": 0.1,
+   "recycleableGarbage": 0.25,
+   "landfillGarbage": 0.5,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.0025   
+         "name": "AZ",
+         "value": 0.0025   
       },
       {
-         "State": "CA",
-         "Value": 0.0030  
+         "name": "CA",
+         "value": 0.0030  
       }
    ]
 
@@ -1763,17 +1763,17 @@
  {
    "pid": 80432400036,
    "productName": "Alcohol",
-   "Garbage Generated": 0.2,
-   "Recycleable Garbage": 0.3,
-   "Landfill Garbage": 0.1,
-    "stateVal":[
+   "garbageGenerated": 0.2,
+   "recycleableGarbage": 0.3,
+   "landfillGarbage": 0.1,
+    "state":[
       {
-         "State": "AZ",
-         "Value": 0.003   
+         "name": "AZ",
+         "value": 0.003   
       },
       {
-         "State": "CA",
-         "Value": 0.004   
+         "name": "CA",
+         "value": 0.004   
       }
    ]
  }
