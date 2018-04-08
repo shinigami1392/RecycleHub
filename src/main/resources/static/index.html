@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/cufon-replace.js"></script>
     <script type="text/javascript" src="js/Butter_500.font.js"></script>
 </head>
-<body>
+<body onload="checkSession()">
 <div class="main">
     <!-- header -->
     <header>
@@ -30,6 +30,10 @@
                 <li class="bg_none"><a href="Contacts.html">Contact Us</a></li>
             </ul>
         </nav>
+        <ul id="icon">
+            <li id="welcomeNote"></li>
+            <li id="logout" onclick="destroySession()"><a href="#"> Logout</a> </li>
+        </ul>
     </header>
 </div>
 
@@ -87,17 +91,17 @@
         });
 
         $("#photos").jqGrid({
-            url:'http://localhost:8080/showProducts',
+            url:'http://localhost:8080/getStackedHistory',
             datatype: "json",
             colNames:['Product ID','Product Name', 'Product Quantity', 'Value'],
             colModel:[
-                {name:'PID',index:'PID', width:100, editable: false,hidden:false},
-                {name:'ProductName',index:'ProductName', width:212, editable: true,
+                {name:'pid',index:'pid', width:100, editable: false,hidden:false},
+                {name:'productName',index:'productName', width:212, editable: true,
                     cellEdit:true,
                     edittype: 'select',
                     formatter: 'select',editoptions:{value: getAllSelectOptions()}},
-                {name:'ProductQuantity',index:'ProductQuantity', width:140, editable: true},
-                {name:'Value',index:'Value', width:115, sortable:true, editable: false, edittype:"textarea"}
+                {name:'quantity',index:'quantity', width:140, editable: true},
+                {name:'amount',index:'amount', width:115, sortable:true, editable: false, edittype:"textarea"}
             ],
 //            afterInsertRow: function(id, currentData, jsondata) {
 //                var button = "<a class='gridbutton' data-id='"+id+"' href='#'>Recycle</a>";
@@ -139,7 +143,7 @@
 //                    console.log(finaldata);
 //                }
 //            });
-            console.log(dropdownObj);
+            //console.log(dropdownObj);
             return dropdownObj;
 
         }
@@ -187,7 +191,7 @@
                 left: "5",
                 right: "5",
                 onclickSubmit: function (response, postdata) {
-                    console.log(response);
+                    //console.log(response);
                     AddPost(postdata);
                 }
             },
@@ -225,19 +229,40 @@
             console.log(params);
         }
         function AddPost(params) {
-            console.log(params);
+            //console.log(params);
             var obj = {};
             obj.pid = params.productName;
-            obj.quantity = params.ProductQuantity;
+            obj.quantity = params.quantity;
+            //console.log(obj);
             $.ajax({
                 type : "POST",
-                url : "http://localhost:8080/addToStack",
-                data : {
-                    "obj" : obj
-                },
+                url : "http://localhost:8080/calculateRecycleValue",
+                contentType: "text/plain",
+                data : JSON.stringify(obj),
                 success: function(status){
-                    if(status)
-                        location.reload();
+                    if(status){
+                        var temp = {};
+                        var list = [];
+                        temp.pid = status.pid;
+                        temp.productName = status.productName;
+                        temp.quantity = status.quantity;
+                        temp.amount = status.value;
+                        list.push(temp);
+                        alert(JSON.stringify(list));
+                        $.ajax({
+                            type : "POST",
+                            contentType: "application/json",
+                            url : "http://localhost:8080/addToStack",
+                            data : JSON.stringify(list),
+                            success: function(status){
+                                if(status)
+                                    location.reload();
+                                else
+                                    alert("Error occurred : " +status);
+                            }
+                        });
+                        console.log(status);
+                    }
                     else
                         alert("Error occurred : " +status);
                 }
@@ -255,12 +280,12 @@
         }
 
         function sendForRecycle(finalList) {
+            //alert(JSON.stringify(finalList));
             $.ajax({
                 type : "POST",
                 url : "http://localhost:8080/recycle",
-                data : {
-                    "finalList" : finalList
-                },
+                contentType: "application/json",
+                data : JSON.stringify(finalList),
                 success: function(status){
                     if(status)
                         location.reload();
@@ -284,6 +309,7 @@
             {
                 var obj = {};
                 obj.pid = list[i];
+                obj.productName = list[i+1];
                 obj.quantity = list[i+2];
                 obj.amount = list[i+3];
                 finalList.push(obj);
@@ -293,4 +319,20 @@
 
 
     });
+
+    function checkSession(){
+        if(localStorage.getItem('Username')!= undefined){
+            document.getElementById("welcomeNote").innerHTML = "Welcome, " + localStorage.getItem('Username') + '!';
+        }
+        else{
+            location.href="login.html"
+        }
+    }
+
+    function destroySession() {
+        if(localStorage.getItem('Username')!= undefined){
+            localStorage.removeItem('Username');
+            location.href="login.html";
+        }
+    }
 </script>

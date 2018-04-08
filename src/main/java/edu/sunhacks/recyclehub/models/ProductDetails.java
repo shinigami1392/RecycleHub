@@ -7,6 +7,14 @@ public class ProductDetails {
     private int quantity;
     private double amount;
 
+    public ProductDetails(){}
+    public ProductDetails(String pid, String productName, int quantity, double amount) {
+        this.pid = pid;
+        this.productName = productName;
+        this.quantity = quantity;
+        this.amount = amount;
+    }
+
     public String getPid() {
         return pid;
     }
@@ -41,7 +49,11 @@ public class ProductDetails {
 
     @Override
     public String toString() {
-        return "ProductDetails [pid=" + pid + ", quantity=" + quantity + ", amount="+ amount+"]";
+        return "ProductDetails{" +
+                "pid='" + pid + '\'' +
+                ", productName='" + productName + '\'' +
+                ", quantity=" + quantity +
+                ", amount=" + amount +
+                '}';
     }
-
 }

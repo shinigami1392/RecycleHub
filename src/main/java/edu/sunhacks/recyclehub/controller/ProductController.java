@@ -8,14 +8,13 @@ import java.util.List;
 
 import edu.sunhacks.recyclehub.models.UserRepository;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.web.bind.annotation.RestController;
 
 import edu.sunhacks.recyclehub.models.Product;
 import edu.sunhacks.recyclehub.models.ProductRepository;
@@ -44,10 +43,38 @@ public class ProductController {
 		}
 		return products;
 	}*/
-	
+//    @RequestMapping(value = "/getStackedHistory" , method = RequestMethod.GET)
+//    public @ResponseBody String showProducts() {
+//        try {
+//            JSONArray cellarray = new JSONArray();
+//            JSONObject item1 = new JSONObject();
+//            JSONObject item2 = new JSONObject();
+//            item1.put("pid","123123");
+//            item1.put("quantity","1");
+//            item1.put("productName", "Beers");
+//            item1.put("amount","$20.0");
+//            item2.put("pid","090123");
+//            item2.put("productName", "Whiskey");
+//            item2.put("quantity","2");
+//            item2.put("amount","$120.0");
+//            cellarray.put(item1);
+//            cellarray.put(item2);
+//            System.out.println("Mock : " +cellarray.toString());
+//            return cellarray.toString();
+//        }catch(Exception exception){
+//            System.out.println("error is "+exception);
+//            return null;
+//        }
+//    }
+
 	@GetMapping("/pids")
 	public List<Product> findByPids(@RequestParam("pid") String[] ids){
 		return mongoOperations.find(query(where("pid").in(Arrays.asList(ids))), Product.class);
 	}
+
+    @GetMapping("/all")
+    public List<Product> findAll(){
+        return productRepository.findAll();
+    }
 
 }

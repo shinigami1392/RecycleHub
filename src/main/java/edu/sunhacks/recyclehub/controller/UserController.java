@@ -22,6 +22,8 @@ import java.util.*;
 @RestController
 public class UserController {
 
+
+
     private UserRepository userRep;
 
     public UserController(UserRepository userRep){
@@ -70,8 +72,9 @@ public class UserController {
 
             if(session != null) {
                 User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
-                responseDB = "{ \"recycledProducts\":\"" + mapper.writeValueAsString(userHistory.getRecycledProdDetails()) + "\",";
-                responseDB += "\"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
+                //responseDB = "{ \"recycledProducts\":\"" + mapper.writeValueAsString(userHistory.getRecycledProdDetails()) + "\",";
+                responseDB = mapper.writeValueAsString(userHistory.getRecycledProdDetails());
+                //responseDB += "\"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,7 +92,9 @@ public class UserController {
 
             if(session != null) {
                 User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
-                responseDB = "{ \"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
+//                responseDB = "{ \"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
+                  responseDB = mapper.writeValueAsString(userHistory.getStackedProdDetails());
+                  System.out.println("Controller : " +responseDB);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -142,11 +147,13 @@ public class UserController {
                     Iterator stackIter = databaseStackProdList.iterator();
                     while (stackIter.hasNext()) {
                         ProductDetails prodDet = (ProductDetails) stackIter.next();
-                        ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
-                        prodDet.setProductName(prodD.getProductName());
-                        prodDet.setQuantity(prodD.getQuantity() + prodDet.getQuantity());
-                        prodDet.setAmount(prodD.getAmount() + prodDet.getAmount());
-                        prodIdToProdDetailsMap.remove(prodDet.getPid());
+                        ProductDetails prodD = prodIdToProdDetailsMap.get(prodDet.getPid());
+                        if(prodD != null) {
+                            prodDet.setProductName(prodD.getProductName());
+                            prodDet.setQuantity(prodD.getQuantity() + prodDet.getQuantity());
+                            prodDet.setAmount(prodD.getAmount() + prodDet.getAmount());
+                            prodIdToProdDetailsMap.remove(prodDet.getPid());
+                        }
                     }
                 }else{
                     databaseStackProdList = new ArrayList<ProductDetails>();
@@ -182,22 +189,26 @@ public class UserController {
                 Iterator stackIter = userHistory.getStackedProdDetails().iterator();
                 while(stackIter.hasNext()){
                     ProductDetails prodDet = (ProductDetails)stackIter.next();
-                    ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
-                    prodDet.setProductName(prodD.getProductName());
-                    prodDet.setQuantity(prodDet.getQuantity() - prodD.getQuantity());
-                    prodDet.setAmount(prodDet.getAmount() - prodD.getAmount());
-                    if(prodDet.getQuantity()<=0){
-                        stackIter.remove();
+                    ProductDetails prodD = prodIdToProdDetailsMap.get(prodDet.getPid());
+                    if(prodD != null) {
+                        prodDet.setProductName(prodD.getProductName());
+                        prodDet.setQuantity(prodDet.getQuantity() - prodD.getQuantity());
+                        prodDet.setAmount(prodDet.getAmount() - prodD.getAmount());
+                        if (prodDet.getQuantity() <= 0) {
+                            stackIter.remove();
+                        }
                     }
                 }
                 Iterator recycleIter = userHistory.getRecycledProdDetails().iterator();
                 while(recycleIter.hasNext()){
                     ProductDetails prodDet = (ProductDetails)recycleIter.next();
-                    ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
-                    prodDet.setProductName(prodD.getProductName());
-                    prodDet.setQuantity(prodDet.getQuantity() + prodD.getQuantity());
-                    prodDet.setAmount(prodDet.getAmount() + prodD.getAmount());
-                    prodIdToProdDetailsMap.remove(prodDet.getPid());
+                    ProductDetails prodD = prodIdToProdDetailsMap.get(prodDet.getPid());
+                    if(prodD != null) {
+                        prodDet.setProductName(prodD.getProductName());
+                        prodDet.setQuantity(prodDet.getQuantity() + prodD.getQuantity());
+                        prodDet.setAmount(prodDet.getAmount() + prodD.getAmount());
+                        prodIdToProdDetailsMap.remove(prodDet.getPid());
+                    }
                 }
                 userHistory.getRecycledProdDetails().addAll(prodIdToProdDetailsMap.values());
                 userRep.save(userHistory);
@@ -210,7 +221,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/calculateRecycleValue", method = RequestMethod.POST,consumes="application/json",produces="application/json")
+    @RequestMapping(value = "/calculateRecycleValue", method = RequestMethod.POST,consumes="text/plain",produces="application/json")
     public @ResponseBody String calculateRecycleValue(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
         String responseDB = "{\"status\" : \"Product not found\"}";
 
@@ -224,7 +235,7 @@ public class UserController {
             map = mapper.readValue(json, new TypeReference<Map<String, String>>(){});
 
             String pid = (String)map.getOrDefault("pid", "");
-            Integer quantity = Integer.parseInt((String)map.getOrDefault("quantity", ""));
+            Integer quantity = Integer.parseInt((String)map.getOrDefault("quantity", 0));
 
             try {
 
