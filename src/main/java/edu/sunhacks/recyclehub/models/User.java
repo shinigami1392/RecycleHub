@@ -12,6 +12,26 @@ public class User {
     private String username;
     private String password;
 
+    private List<ProductDetails> stackedProdDetails;
+
+    private List<ProductDetails> recycledProdDetails;
+
+    public List<ProductDetails> getStackedProdDetails() {
+        return stackedProdDetails;
+    }
+
+    public void setStackedProdDetails(List<ProductDetails> stackedProdDetails) {
+        this.stackedProdDetails = stackedProdDetails;
+    }
+
+    public List<ProductDetails> getRecycledProdDetails() {
+        return recycledProdDetails;
+    }
+
+    public void setRecycledProdDetails(List<ProductDetails> recycledProdDetails) {
+        this.recycledProdDetails = recycledProdDetails;
+    }
+
     public String getId() {
         return id;
     }

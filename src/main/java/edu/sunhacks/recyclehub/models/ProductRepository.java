@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String>{
+
 	@Query("{ pid: { $all: ?0 } }")
 	List<Product> findByPidIn(List<String> pid);
+
 }
