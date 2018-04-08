@@ -6,6 +6,7 @@ import edu.sunhacks.recyclehub.models.Product;
 import edu.sunhacks.recyclehub.models.ProductDetails;
 import edu.sunhacks.recyclehub.models.User;
 import edu.sunhacks.recyclehub.models.UserRepository;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
+
+import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Query.query;
 
 @RestController
 public class UserController {
@@ -286,5 +290,10 @@ public class UserController {
         }finally{
             return responseDB;
         }
+    }
+
+    @GetMapping("/isLoggedIn")
+    public boolean isLoggedIn(HttpServletRequest request){
+        return request.getSession(false) != null;
     }
 }

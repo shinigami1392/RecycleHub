@@ -33,8 +33,8 @@
 			</ul>
 		</nav>
 		<ul id="icon">
-			<li id="welcomeNote"></li>
-            <li id="logout" onclick="destroySession()">Logout</li>
+			<b><li id="welcomeNote"></li></b>
+            <a href="#"><li id="logout" onclick="destroySession()"><b>Logout</b></li></a>
 		</ul>
 	</header>
 </div>
@@ -55,18 +55,18 @@
 						<ul>
 							<li class="under">
 								<span class="dropcap_1">1</span>
-								<strong>Environment friendly way to dispose the household garbage</strong><br>
-								Write here
+								<strong>The world needs attention!</strong><br>
+                                With increasing garbage footprint per person, we need a system which helps people realize how much their daily wasteful habits affects the environment.
                             </li>
 							<li class="under">
 								<span class="dropcap_1">2</span>
 								<strong>Encourage yourself to recycle garbage</strong><br>
-								Write here
+                                Human beings always have chosen to believe in metrics to gauge the effect of their actions. The mission of our system is to quantify the amount of garbage a person creates through his daily buying habits
                             </li>
 							<li class="under">
 								<span class="dropcap_1">3</span>
 								<strong>Bring home some extra cash</strong><br>
-								Write Here
+                                Once a person is able to visualize the effect of his habits, we also aim to provide them ways to recycle the garbage and make him/her realize how much profit they could make through a little bit of proactiveness.
 							</li>
 						</ul>
 					</article>
@@ -97,19 +97,30 @@
 </div>
 <script type="text/javascript">
     function checkSession(){
-        if(localStorage.getItem('Username')!= undefined){
-            document.getElementById("welcomeNote").innerHTML = "Welcome, " + localStorage.getItem('Username') + '!';
-        }
-        else{
-            location.href="login.html"
-        }
+        $.ajax({
+            type : "GET",
+            url : "http://localhost:8080/isLoggedIn",
+            success: function(success){
+                if(success)
+                    document.getElementById("welcomeNote").innerHTML = "Welcome, " + localStorage.getItem('Username') + '!';
+                else
+                    location.href="login.html"
+            }
+        });
     }
 
     function destroySession() {
-        if(localStorage.getItem('Username')!= undefined){
-            localStorage.removeItem('Username');
-            location.href="login.html";
-        }
+//        if(localStorage.getItem('Username')!= undefined){
+//            localStorage.removeItem('Username');
+//            location.href="login.html";
+//        }
+        $.ajax({
+            type : "GET",
+            url : "http://localhost:8080/logout",
+            success: function(){
+                location.href = "login.html";
+            }
+        });
     }
     Cufon.now();
 </script>

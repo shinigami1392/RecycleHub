@@ -32,7 +32,7 @@
         </nav>
         <ul id="icon">
             <li id="welcomeNote"></li>
-            <li id="logout" onclick="destroySession()">Logout</li>
+            <a href="#"><li id="logout" onclick="destroySession()"><b>Logout</b></li></a>
         </ul>
     </header>
 </div>
@@ -90,7 +90,7 @@
         $("#photos").jqGrid({
             url:'http://localhost:8080/getAllHistory',
             datatype: "json",
-            colNames:['Product ID','Product Name', 'Product Quantity', 'Value'],
+            colNames:['Product ID','Product Name', 'Product Quantity', 'Value ($)'],
             colModel:[
                 {name:'pid',index:'pid', width:100, editable: false,hidden:false},
                 {name:'productName',index:'productName', width:212, editable: true,
@@ -317,17 +317,29 @@
 
     });
     function checkSession(){
-        if(localStorage.getItem('Username')!= undefined){
-            document.getElementById("welcomeNote").innerHTML = "Welcome, " + localStorage.getItem('Username') + '!';
-        }
-        else{
-            location.href="login.html"
-        }
+        $.ajax({
+            type : "GET",
+            url : "http://localhost:8080/isLoggedIn",
+            success: function(success){
+                if(success)
+                    document.getElementById("welcomeNote").innerHTML = "Welcome, " + localStorage.getItem('Username') + '!';
+                else
+                    location.href="login.html"
+            }
+        });
     }
     function destroySession() {
-        if(localStorage.getItem('Username')!= undefined){
-            localStorage.removeItem('Username');
-            location.href="login.html";
-        }
+
+//        if(localStorage.getItem('Username')!= undefined){
+//            localStorage.removeItem('Username');
+//            location.href="login.html";
+//        }
+        $.ajax({
+            type : "GET",
+            url : "http://localhost:8080/logout",
+            success: function(){
+                location.href = "login.html";
+            }
+        });
     }
 </script>
