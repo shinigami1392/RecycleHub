@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
+    <title>Recycle Hub</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/css/ui.jqgrid.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/js/jquery.jqgrid.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Product Information</h1>
+    <div id="header"></div>
+    <table id="photos" class="display" cellspacing="0"></table>
+    <div id="pager2" class="col-md-12"></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#photos").jqGrid({
+            url:'http://localhost:8080/showProducts',
+            datatype: "json",
+            colNames:['Product ID','Product Name', 'Product Quantity', 'Value','Action'],
+            colModel:[
+                {name:'PID',index:'PID', width:100, editable: false,hidden:true},
+                {name:'ProductName',index:'ProductName', width:400, editable: true},
+                {name:'ProductQuantity',index:'ProductQuantity', width:140, editable: true},
+                {name:'Value',index:'Value', width:115, sortable:true, editable: false, edittype:"textarea"},
+                {name:'Recycle',index:'Recycle', width:50, sortable:false, editable: false}
+            ],
+            afterInsertRow: function(id, currentData, jsondata) {
+                var button = "<a class='gridbutton' data-id='"+id+"' href='#'>Recycle</a>";
+                $(this).setCell(id, "Recycle", button);
+            },
+            loadComplete: function(data) {
+                $(".gridbutton").on('click', function(e) {
+                    e.preventDefault();
+                    console.log(data[$(this).data("id").substr(3) - 1].PID);
+                    // Send for Recycle
+                    var pid=data[$(this).data("id").substr(3) - 1].PID;
+                    sendForRecycle(pid);
+                    //console.log($(this).data("id").substr(3));
+                    //alert('Edit id: ' + $(this).data("id"));
+                });
+            },
+            rowNum:10,
+            loadonce: true,
+            rowList:[10,20,30],
+            pager: '#pager2',
+            sortname: 'id',
+            viewrecords: true,
+            sortorder: "desc",
+            caption:"",
+            editable: true
+        });
+        $("#photos").jqGrid('navGrid','#pager2',
+            {
+                edit:false, edittitle: "Edit Post", width: 900,
+                add:true, addtitle: "Add Post", width: 900,
+                del:false,
+                search: true,
+                refresh: true,
+                view:false
+            },
+            //Edit Options. save key parameter will keybind the Enter key to submit.
+            {
+                editCaption: "Edit Post",
+                edittext: "Edit",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                //bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                onclickSubmit: function (response, postdata) {
+                    //call edit button
+                    EditComment(postdata);
+                }
+            },
+            //add Options. save key parameter will keybind the Enter key to submit.
+            {
+                addCaption: "Add Post",
+                addtext: "Add",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                //bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                onclickSubmit: function (response, postdata) {
+                    AddPost(postdata);
+                }
+            },
+            //delete Options. save key parameter will keybind the Enter key to submit.
+            {
+                deleteCaption: "delete Post",
+                deletetext: "Delete Post",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                //bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                onclickSubmit: function (response, postdata) {
+                    DeletePost(postdata);
+                }
+            }
+
+
+        );
+        function commonError(data) {
+            return "Error Occured during Operation. Please try again";
+        }
+        function EditPost(params) {
+            //Here you need to define ajax call for update records to server
+            console.log(params);
+        }
+        function AddPost(params) {
+            //Here you need to define ajax call for insert records to server
+            console.log(params);
+        }
+        function DeletePost(params) {
+            //Here you need to define ajax call for delete records to server
+            console.log(params);
+        }
+
+        function sendForRecycle(pid) {
+            $.ajax({
+                type : "POST",
+                url : "http://localhost:8080/Recycled",
+                data : {
+                    "pid" : pid
+                },
+                success: function(status){
+                    if(status)
+                        location.reload();
+                    else
+                        alert("Error occurred : " +status);
+                }
+            });
+        }
+    });
+</script>
