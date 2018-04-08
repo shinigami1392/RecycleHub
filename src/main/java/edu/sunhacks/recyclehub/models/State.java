@@ -4,7 +4,7 @@ public class State {
 	private String name;
 	private String value;
 
-	public State() {}
+	protected State() {}
 
 	public State(String name, String value) {
 		super();
@@ -15,15 +15,11 @@ public class State {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public String getValue() {
 		return value;
 	}
-	public void setValue(String value) {
-		this.value = value;
-	}
+	
 	
 	
 }

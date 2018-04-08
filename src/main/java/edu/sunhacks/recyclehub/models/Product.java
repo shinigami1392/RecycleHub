@@ -22,6 +22,20 @@ public class Product {
 	private String landfillGarbage;
 	private List<State> states;
 
+	protected Product(){
+		this.states = new ArrayList<>();
+	}
+	public Product(String pid, String productName, String garbageGenerated, String recycleableGarbage,
+			String landfillGarbage, List<State> states) {
+		super();
+		this.pid = pid;
+		this.productName = productName;
+		this.garbageGenerated = garbageGenerated;
+		this.recycleableGarbage = recycleableGarbage;
+		this.landfillGarbage = landfillGarbage;
+		this.states = states;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -29,38 +43,26 @@ public class Product {
 	public String getPid() {
 		return pid;
 	}
-	public void setPid(String pid) {
-		this.pid = pid;
-	}
+	
 	public String getProductName() {
 		return productName;
 	}
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
+	
 	public String getGarbageGenerated() {
 		return garbageGenerated;
 	}
-	public void setGarbageGenerated(String garbageGenerated) {
-		this.garbageGenerated = garbageGenerated;
-	}
+	
 	public String getRecycleableGarbage() {
 		return recycleableGarbage;
 	}
-	public void setRecycleableGarbage(String recycleableGarbage) {
-		this.recycleableGarbage = recycleableGarbage;
-	}
+	
 	public String getLandfillGarbage() {
 		return landfillGarbage;
 	}
-	public void setLandfillGarbage(String landfillGarbage) {
-		this.landfillGarbage = landfillGarbage;
-	}
+	
 	public List<State> getStates() {
 		return states;
 	}
-	public void setStates(List<State> states) {
-		this.states = states;
-	}
+	
 
 }
