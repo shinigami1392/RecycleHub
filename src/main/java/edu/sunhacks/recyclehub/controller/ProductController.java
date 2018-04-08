@@ -14,7 +14,6 @@ import edu.sunhacks.recyclehub.models.Product;
 import edu.sunhacks.recyclehub.models.ProductRepository;
 
 @RestController
-@RequestMapping("/products")
 public class ProductController {
 	
 	private ProductRepository productRepository;
@@ -23,10 +22,10 @@ public class ProductController {
 		this.productRepository = productRepository;
 	}
 	
-	@GetMapping("/findByIds")
+	@GetMapping("/pids")
 	public List<Product> findByIds(@RequestParam("id") String[] ids){
-		System.err.println("IN IDS: "+Arrays.toString(ids));
-		return new ArrayList<Product>();
+		System.err.println("In Find By Ids:" + ids[0]);
+		return productRepository.getAllByPids(Arrays.asList(ids));
 	}
 
 }
