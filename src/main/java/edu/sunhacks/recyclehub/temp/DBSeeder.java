@@ -11,6 +11,7 @@ import edu.sunhacks.recyclehub.models.ProductRepository;
 import edu.sunhacks.recyclehub.models.State;
 
 //@Component
+<<<<<<< HEAD
 public class DBSeeder{
 	
 	/*private ProductRepository productRepository;
@@ -27,5 +28,23 @@ public class DBSeeder{
 		List<Product> products = Arrays.asList(product1,product2);
 		this.productRepository.saveAll(products);
 	}
+=======
+public class DBSeeder {
+	
+//	private ProductRepository productRepository;
+//
+//	public DBSeeder(ProductRepository productRepository) {
+//		this.productRepository = productRepository;
+//	}
+//
+//	@Override
+//	public void run(String... args) throws Exception {
+//		Product product1 = new Product("123", "Namkeen", "2", "1", "1", Arrays.asList(new State("AZ","0.10"),new State("CA","0.15")));
+//		Product product2 = new Product("456", "Frooti", "4", "2", "2", Arrays.asList(new State("AZ","0.13"),new State("CA","0.18")));
+//		this.productRepository.deleteAll();
+//		List<Product> products = Arrays.asList(product1,product2);
+//		this.productRepository.saveAll(products);
+//	}
+>>>>>>> 5c7e24456c716c4ed85ad90e6ba997cba222723a
 
 */}

@@ -30,6 +30,9 @@ public class ProductDetails {
         this.amount = amount;
     }
 
-
+    @Override
+    public String toString() {
+        return "ProductDetails [pid=" + pid + ", quantity=" + quantity + ", amount="+ amount+"]";
+    }
 
 }
