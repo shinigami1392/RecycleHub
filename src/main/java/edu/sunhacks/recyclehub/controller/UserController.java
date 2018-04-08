@@ -144,4 +144,49 @@ public class UserController {
             return responseDB;
         }
     }
+
+    @RequestMapping(value = "/recycle", method = RequestMethod.POST, produces = "text/plain")
+    public @ResponseBody String recycle(@RequestBody List<ProductDetails> stackProdList, HttpServletRequest request, HttpServletResponse response) {
+        String responseDB = "{\"status\" : \"" + "User not logged in" + "\"}";
+        Map<String, ProductDetails> prodIdToProdDetailsMap = new HashMap<String, ProductDetails>();
+        for(ProductDetails prodDet: stackProdList){
+            ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+            prodD.setPid(prodDet.getPid());
+            prodD.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
+            prodD.setAmount(prodD.getAmount()+prodDet.getAmount());
+            prodIdToProdDetailsMap.put(prodDet.getPid(), prodD);
+        }
+        try {
+            HttpSession session = request.getSession(false);
+            if(session != null) {
+                responseDB = "{\"status\" : \"" + false + "\"}";
+                User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
+                Iterator stackIter = userHistory.getStackedProdDetails().iterator();
+                while(stackIter.hasNext()){
+                    ProductDetails prodDet = (ProductDetails)stackIter.next();
+                    ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                    prodDet.setQuantity(prodDet.getQuantity() - prodD.getQuantity());
+                    prodDet.setAmount(prodDet.getAmount() - prodD.getAmount());
+                    if(prodDet.getQuantity()<=0){
+                        stackIter.remove();
+                    }
+                }
+                Iterator recycleIter = userHistory.getRecycledProdDetails().iterator();
+                while(recycleIter.hasNext()){
+                    ProductDetails prodDet = (ProductDetails)recycleIter.next();
+                    ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                    prodDet.setQuantity(prodDet.getQuantity() + prodD.getQuantity());
+                    prodDet.setAmount(prodDet.getAmount() + prodD.getAmount());
+                    prodIdToProdDetailsMap.remove(prodDet.getPid());
+                }
+                userHistory.getRecycledProdDetails().addAll(prodIdToProdDetailsMap.values());
+                userRep.save(userHistory);
+                responseDB = "{\"status\" : \"" + true + "\"}";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            return responseDB;
+        }
+    }
 }
