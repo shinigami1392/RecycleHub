@@ -33,10 +33,6 @@ public class UserController {
     public @ResponseBody String authenticateUser(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
     	System.err.println(json);
         boolean responseDB = false;
-<<<<<<< HEAD
-=======
-        System.out.println(json);
->>>>>>> 5c7e24456c716c4ed85ad90e6ba997cba222723a
         try {
 
             ObjectMapper mapper = new ObjectMapper();
