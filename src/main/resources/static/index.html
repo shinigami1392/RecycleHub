@@ -7,48 +7,110 @@
     <title>Recycle Hub</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/css/ui.jqgrid.min.css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/js/jquery.jqgrid.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-replace.js"></script>
+    <script type="text/javascript" src="js/Butter_500.font.js"></script>
 </head>
 <body>
-<div class="container">
-    <h1>Product Information</h1>
-    <div id="header"></div>
-    <table id="photos" class="display" cellspacing="0"></table>
-    <div id="pager2" class="col-md-12"></div>
+<div class="main">
+    <!-- header -->
+    <header>
+        <nav>
+            <ul id="menu">
+                <li id="menu_active"><a href="welcome.html">Home</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="history.html">History</a></li>
+                <li class="bg_none"><a href="Contacts.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="body1">
+    <div class="body2">
+        <div class="main">
+            <h1><a href="welcome.html" id="logo"></a></h1>
+            <section id="content">
+                <div class="wrapper marg_left1">
+                    <!--<article class="col2 pad_left1">-->
+                    <!--<h2>Featured Projects</h2>-->
+                    <!--<figure class="marg_top1 pad_bot1"><a href="#"><img src="images/page1_img2.jpg" alt=""></a></figure>-->
+                    <!--<p><strong>Title:</strong> <a href="#">Lorem ipsum dolor sit amet</a><br>Consectetur adipisicing elit, sed do eiumod tempor incididunt ut labore.</p>-->
+                    <!--<figure class="marg_top1 pad_bot1"><a href="#"><img src="images/page1_img3.jpg" alt=""></a></figure>-->
+                    <!--<p><strong>Title:</strong> <a href="#">Ut enim ad minim veniam</a><br>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>-->
+                    <!--</article>-->
+                    <div class="container">
+                        <h1>Product Information</h1>
+                        <div id="header"></div>
+                        <table id="photos" class="display" cellspacing="0"></table>
+                        <div id="pager2" class="col-md-12"></div>
+                        <br/><br/>
+                        <div id="RecycleAll">
+                            <input type="button" id="RecyleAll" class="btn btn-primary" value="Recycle All"/>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="wrapper">-->
+                <!--<article class="col1"><a href="#" class="button">More</a></article>-->
+                <!--<article class="col3 pad_left1"><a href="#" class="button">More</a></article>-->
+                <!--</div>-->
+            </section>
+            <!-- / content -->
+        </div>
+    </div>
 </div>
 </body>
 </html>
 <script type="text/javascript">
+    var dropdownObj = {};
     $(document).ready(function(){
+        var finaldata = {};
+        $.ajax({
+            type : "GET",
+            url : "http://localhost:8080/all",
+            async:false,
+            success: function(data){
+                for(var i = 0; i < data.length;i++){
+                    //console.log(data[i].pid);
+                    //console.log(data[i].productName);
+                    finaldata[data[i].pid] = data[i].productName;
+                }
+                dropdownObj = finaldata;
+            }
+        });
+
         $("#photos").jqGrid({
             url:'http://localhost:8080/showProducts',
             datatype: "json",
-            colNames:['Product ID','Product Name', 'Product Quantity', 'Value','Action'],
+            colNames:['Product ID','Product Name', 'Product Quantity', 'Value'],
             colModel:[
-                {name:'PID',index:'PID', width:100, editable: false,hidden:true},
-                {name:'ProductName',index:'ProductName', width:400, editable: true},
+                {name:'PID',index:'PID', width:100, editable: false,hidden:false},
+                {name:'ProductName',index:'ProductName', width:212, editable: true,
+                    cellEdit:true,
+                    edittype: 'select',
+                    formatter: 'select',editoptions:{value: getAllSelectOptions()}},
                 {name:'ProductQuantity',index:'ProductQuantity', width:140, editable: true},
-                {name:'Value',index:'Value', width:115, sortable:true, editable: false, edittype:"textarea"},
-                {name:'Recycle',index:'Recycle', width:50, sortable:false, editable: false}
+                {name:'Value',index:'Value', width:115, sortable:true, editable: false, edittype:"textarea"}
             ],
-            afterInsertRow: function(id, currentData, jsondata) {
-                var button = "<a class='gridbutton' data-id='"+id+"' href='#'>Recycle</a>";
-                $(this).setCell(id, "Recycle", button);
-            },
-            loadComplete: function(data) {
-                $(".gridbutton").on('click', function(e) {
-                    e.preventDefault();
-                    console.log(data[$(this).data("id").substr(3) - 1].PID);
-                    // Send for Recycle
-                    var pid=data[$(this).data("id").substr(3) - 1].PID;
-                    sendForRecycle(pid);
-                    //console.log($(this).data("id").substr(3));
-                    //alert('Edit id: ' + $(this).data("id"));
-                });
-            },
+//            afterInsertRow: function(id, currentData, jsondata) {
+//                var button = "<a class='gridbutton' data-id='"+id+"' href='#'>Recycle</a>";
+//                $(this).setCell(id, "Recycle", button);
+//            },
+//            loadComplete: function(data) {
+//                $(".gridbutton").on('click', function(e) {
+//                    e.preventDefault();
+//                    console.log(data[$(this).data("id").substr(3) - 1].PID);
+//                    var pid=data[$(this).data("id").substr(3) - 1].PID;
+//                    sendForRecycle(pid);
+//                });
+//            },
             rowNum:10,
             loadonce: true,
             rowList:[10,20,30],
@@ -59,11 +121,34 @@
             caption:"",
             editable: true
         });
+
+        function getAllSelectOptions(){
+//            var finaldata = {};
+////            var states = { '1': 'Alabama', '2': 'California', '3': 'Florida',
+////                '4': 'Hawaii', '5': 'London', '6': 'Oxford' };
+//            $.ajax({
+//                type : "GET",
+//                url : "http://localhost:8080/all",
+//                success: function(data){
+//                    //console.log(data);
+//                    for(var i = 0; i < data.length;i++){
+//                        console.log(data[i].pid);
+//                        console.log(data[i].productName);
+//                        finaldata[data[i].pid] = data[i].productName;
+//                    }
+//                    console.log(finaldata);
+//                }
+//            });
+            console.log(dropdownObj);
+            return dropdownObj;
+
+        }
+
         $("#photos").jqGrid('navGrid','#pager2',
             {
                 edit:false, edittitle: "Edit Post", width: 900,
                 add:true, addtitle: "Add Post", width: 900,
-                del:false,
+                del:false, deltitle:"Recycle All?",
                 search: true,
                 refresh: true,
                 view:false
@@ -102,6 +187,7 @@
                 left: "5",
                 right: "5",
                 onclickSubmit: function (response, postdata) {
+                    console.log(response);
                     AddPost(postdata);
                 }
             },
@@ -120,34 +206,34 @@
                 left: "5",
                 right: "5",
                 onclickSubmit: function (response, postdata) {
-                    DeletePost(postdata);
+                    RecycleAll(postdata);
                 }
             }
-
-
         );
         function commonError(data) {
             return "Error Occured during Operation. Please try again";
         }
-        function EditPost(params) {
+        function EditComment(params) {
             //Here you need to define ajax call for update records to server
+            if(confirm("Are you sure want to recycle all the products?")){
+                alert("Yes");
+                console.log(param);
+            }
+            else{
+                alert("No");
+            }
             console.log(params);
         }
         function AddPost(params) {
-            //Here you need to define ajax call for insert records to server
             console.log(params);
-        }
-        function DeletePost(params) {
-            //Here you need to define ajax call for delete records to server
-            console.log(params);
-        }
-
-        function sendForRecycle(pid) {
+            var obj = {};
+            obj.pid = params.productName;
+            obj.quantity = params.ProductQuantity;
             $.ajax({
                 type : "POST",
-                url : "http://localhost:8080/Recycled",
+                url : "http://localhost:8080/addToStack",
                 data : {
-                    "pid" : pid
+                    "obj" : obj
                 },
                 success: function(status){
                     if(status)
@@ -157,5 +243,54 @@
                 }
             });
         }
+        function RecycleAll(params) {
+            //Here you need to define ajax call for delete records to server
+            if(confirm("Are you sure want to recycle all the products?")){
+                alert("Yes");
+                console.log(params);
+            }
+            else{
+                alert("No");
+            }
+        }
+
+        function sendForRecycle(finalList) {
+            $.ajax({
+                type : "POST",
+                url : "http://localhost:8080/recycle",
+                data : {
+                    "finalList" : finalList
+                },
+                success: function(status){
+                    if(status)
+                        location.reload();
+                    else
+                        alert("Error occurred : " +status);
+                }
+            });
+        }
+
+        $("#RecycleAll").on('click', function(e) {
+            e.preventDefault();
+            var finalList = [];
+            var list = [];
+            $('#photos td').each(function() {
+                var cellText = $(this).html();
+                if(cellText){
+                    list.push(cellText);
+                }
+            });
+            for(var i = 0; i < list.length;i+=4)
+            {
+                var obj = {};
+                obj.pid = list[i];
+                obj.quantity = list[i+2];
+                obj.amount = list[i+3];
+                finalList.push(obj);
+            }
+            sendForRecycle(finalList);
+        });
+
+
     });
 </script>
