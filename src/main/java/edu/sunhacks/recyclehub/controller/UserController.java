@@ -46,11 +46,14 @@ public class UserController {
             uCred.setUsername((String)map.getOrDefault("username", ""));
             uCred.setPassword((String)map.getOrDefault("password", ""));
             User userDatabase = userRep.findByUsername(uCred.getUsername());
-            responseDB = uCred.getPassword().equals(userDatabase.getPassword());
-            if(responseDB){
-                HttpSession session = request.getSession();
-                session.setAttribute("username", uCred.getUsername());
+            if(userDatabase!= null){
+                responseDB = uCred.getPassword().equals(userDatabase.getPassword());
+                if(responseDB){
+                    HttpSession session = request.getSession();
+                    session.setAttribute("username", uCred.getUsername());
+                }
             }
+
         } catch(Exception e){
             e.printStackTrace();
         }finally{
