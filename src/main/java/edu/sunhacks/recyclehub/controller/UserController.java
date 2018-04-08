@@ -1,8 +1,6 @@
 package edu.sunhacks.recyclehub.controller;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.sunhacks.recyclehub.models.ProductDetails;
 import edu.sunhacks.recyclehub.models.User;
@@ -12,11 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class UserController {
@@ -30,7 +24,7 @@ public class UserController {
     @RequestMapping(value = "/authenticateUser", method = RequestMethod.POST, produces = "text/plain")
     public @ResponseBody String authenticateUser(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
         boolean responseDB = false;
-
+        System.out.println(json);
         try {
 
             ObjectMapper mapper = new ObjectMapper();
@@ -110,31 +104,41 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/addToStack", method = RequestMethod.POST, produces = "text/plain")
+    @RequestMapping(value = "/addToStack", method = RequestMethod.POST,consumes="application/json",produces="application/json")
     public @ResponseBody String addToStack(@RequestBody List<ProductDetails> stackProdList, HttpServletRequest request, HttpServletResponse response) {
+
         String responseDB = "{\"status\" : \"" + "User not logged in" + "\"}";
-        Map<String, ProductDetails> prodIdToProdDetailsMap = new HashMap<String, ProductDetails>();
-        for(ProductDetails prodDet: stackProdList){
-            ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
-            prodD.setPid(prodDet.getPid());
-            prodD.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
-            prodD.setAmount(prodD.getAmount()+prodDet.getAmount());
-            prodIdToProdDetailsMap.put(prodDet.getPid(), prodD);
-        }
+
         try {
+            System.out.println(stackProdList.toString());
+            Map<String, ProductDetails> prodIdToProdDetailsMap = new HashMap<String, ProductDetails>();
+            for(ProductDetails prodDet: stackProdList){
+                ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                prodD.setPid(prodDet.getPid());
+                prodD.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
+                prodD.setAmount(prodD.getAmount()+prodDet.getAmount());
+                prodIdToProdDetailsMap.put(prodDet.getPid(), prodD);
+            }
+
             HttpSession session = request.getSession(false);
             if(session != null) {
                 responseDB = "{\"status\" : \"" + false + "\"}";
                 User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
-                Iterator stackIter = userHistory.getStackedProdDetails().iterator();
-                while(stackIter.hasNext()){
-                    ProductDetails prodDet = (ProductDetails)stackIter.next();
-                    ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
-                    prodDet.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
-                    prodDet.setAmount(prodD.getAmount()+prodDet.getAmount());
-                    prodIdToProdDetailsMap.remove(prodDet.getPid());
+                List<ProductDetails> databaseStackProdList = userHistory.getStackedProdDetails();
+
+                if(databaseStackProdList  != null) {
+                    Iterator stackIter = databaseStackProdList.iterator();
+                    while (stackIter.hasNext()) {
+                        ProductDetails prodDet = (ProductDetails) stackIter.next();
+                        ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                        prodDet.setQuantity(prodD.getQuantity() + prodDet.getQuantity());
+                        prodDet.setAmount(prodD.getAmount() + prodDet.getAmount());
+                        prodIdToProdDetailsMap.remove(prodDet.getPid());
+                    }
+                }else{
+                    databaseStackProdList = new ArrayList<ProductDetails>();
                 }
-                userHistory.getStackedProdDetails().addAll(prodIdToProdDetailsMap.values());
+                databaseStackProdList.addAll(prodIdToProdDetailsMap.values());
                 userRep.save(userHistory);
                 responseDB = "{\"status\" : \"" + true + "\"}";
             }
@@ -145,7 +149,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/recycle", method = RequestMethod.POST, produces = "text/plain")
+    @RequestMapping(value = "/recycle", method = RequestMethod.POST, consumes="application/json", produces="application/json")
     public @ResponseBody String recycle(@RequestBody List<ProductDetails> stackProdList, HttpServletRequest request, HttpServletResponse response) {
         String responseDB = "{\"status\" : \"" + "User not logged in" + "\"}";
         Map<String, ProductDetails> prodIdToProdDetailsMap = new HashMap<String, ProductDetails>();
