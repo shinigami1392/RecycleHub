@@ -2,6 +2,7 @@ package edu.sunhacks.recyclehub.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.sunhacks.recyclehub.models.Product;
 import edu.sunhacks.recyclehub.models.ProductDetails;
 import edu.sunhacks.recyclehub.models.User;
 import edu.sunhacks.recyclehub.models.UserRepository;
@@ -10,6 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 
 @RestController
@@ -188,6 +195,72 @@ public class UserController {
                 responseDB = "{\"status\" : \"" + true + "\"}";
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            return responseDB;
+        }
+    }
+
+    @RequestMapping(value = "/calculateRecycleValue", method = RequestMethod.POST,consumes="application/json",produces="application/json")
+    public @ResponseBody String calculateRecycleValue(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
+        String responseDB = "{\"status\" : \"Product not found\"}";
+
+        try {
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            Map<String, Object> map = new HashMap<String, Object>();
+
+            // convert JSON string to Map
+            map = mapper.readValue(json, new TypeReference<Map<String, String>>(){});
+
+            String pid = (String)map.getOrDefault("pid", "");
+            Integer quantity = Integer.parseInt((String)map.getOrDefault("quantity", ""));
+
+            try {
+
+                URL url = new URL("http://localhost:8080/pids"+"?pid="+pid);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                conn.setRequestProperty("Accept", "application/json");
+
+                if (conn.getResponseCode() != 200) {
+                    throw new RuntimeException("Failed : HTTP error code : "
+                            + conn.getResponseCode());
+                }
+
+                BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+
+                String output;
+                System.out.println("Output from Server .... \n");
+                StringBuilder sb = new StringBuilder();
+                while ((output = br.readLine()) != null) {
+                    sb.append(output);
+                }
+
+                conn.disconnect();
+                ArrayList<Product> prodList = mapper.readValue(sb.toString(), new TypeReference<List<Product>>(){});
+
+                if(prodList.size() > 0){
+                    Product prod = prodList.get(0);
+                    map.put("garbageGenerated", Double.parseDouble(prod.getGarbageGenerated()) * quantity);
+                    map.put("recycleableGarbage", Double.parseDouble(prod.getRecycleableGarbage()) * quantity);
+                    map.put("landfillGarbage", Double.parseDouble(prod.getLandfillGarbage()) * quantity);
+                    map.put("value", Double.parseDouble(prod.getStates().get(0).getValue()) * quantity);
+                    responseDB = mapper.writeValueAsString(map);
+                }
+            } catch (MalformedURLException e) {
+
+                e.printStackTrace();
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+
+            }
+
+
+        } catch(Exception e){
             e.printStackTrace();
         }finally{
             return responseDB;
