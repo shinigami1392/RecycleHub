@@ -58,6 +58,43 @@ public class UserController {
         }
     }
 
+    @RequestMapping(value = "/getAllHistory", method = RequestMethod.GET, produces = "text/plain")
+    public @ResponseBody String getAllHistory(HttpServletRequest request, HttpServletResponse response) {
+        String responseDB = "{\"status\" : \"" + "User not logged in" + "\"}";;
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            HttpSession session = request.getSession(false);
+
+            if(session != null) {
+                User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
+                responseDB = "{ \"recycledProducts\":\"" + mapper.writeValueAsString(userHistory.getRecycledProdDetails()) + "\",";
+                responseDB += "\"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            return responseDB;
+        }
+    }
+
+    @RequestMapping(value = "/getStackedHistory", method = RequestMethod.GET, produces = "text/plain")
+    public @ResponseBody String getStackedHistory(HttpServletRequest request, HttpServletResponse response) {
+        String responseDB = "{\"status\" : \"" + "User not logged in" + "\"}";;
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            HttpSession session = request.getSession(false);
+
+            if(session != null) {
+                User userHistory = userRep.findByUsername((String)session.getAttribute("username"));
+                responseDB = "{ \"stackedProducts\":\"" +mapper.writeValueAsString(userHistory.getStackedProdDetails()) +  "\"}";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            return responseDB;
+        }
+    }
+
     @RequestMapping(value = "/logout", method = RequestMethod.GET, produces = "text/plain")
     public @ResponseBody String logout(HttpServletRequest request, HttpServletResponse response) {
         String responseDB = "User not logged in";

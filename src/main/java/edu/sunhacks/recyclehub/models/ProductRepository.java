@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String>{
 	@Query("{pids:'?0'}")
-	List<Product> getAllByPids(@Param("pid") List<String> pids);
+	List<Product> getAllByPids(List<String> pids);
 }
