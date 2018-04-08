@@ -10,10 +10,10 @@ import edu.sunhacks.recyclehub.models.Product;
 import edu.sunhacks.recyclehub.models.ProductRepository;
 import edu.sunhacks.recyclehub.models.State;
 
-@Component
-public class DBSeeder implements CommandLineRunner{
+//@Component
+public class DBSeeder{
 	
-	private ProductRepository productRepository;
+	/*private ProductRepository productRepository;
 	
 	public DBSeeder(ProductRepository productRepository) {
 		this.productRepository = productRepository;
@@ -28,4 +28,4 @@ public class DBSeeder implements CommandLineRunner{
 		this.productRepository.saveAll(products);
 	}
 
-}
+*/}
