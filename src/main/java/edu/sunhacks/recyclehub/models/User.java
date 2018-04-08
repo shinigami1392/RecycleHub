@@ -3,6 +3,7 @@ package edu.sunhacks.recyclehub.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection="User")
@@ -15,6 +16,19 @@ public class User {
     private List<ProductDetails> stackedProdDetails;
 
     private List<ProductDetails> recycledProdDetails;
+
+    public User(String username, String password, List<ProductDetails> stackedProdDetails, List<ProductDetails> recycledProdDetails) {
+        this.username = username;
+        this.password = password;
+        this.stackedProdDetails = stackedProdDetails;
+        this.recycledProdDetails = recycledProdDetails;
+    }
+
+    public User(){
+        stackedProdDetails = new ArrayList<ProductDetails>();
+        recycledProdDetails = new ArrayList<ProductDetails>();
+    }
+
 
     public List<ProductDetails> getStackedProdDetails() {
         return stackedProdDetails;

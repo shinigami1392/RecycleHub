@@ -6,6 +6,14 @@ public class State {
 
 	protected State() {}
 
+	@Override
+	public String toString() {
+		return "State{" +
+				"name='" + name + '\'' +
+				", value='" + value + '\'' +
+				'}';
+	}
+
 	public State(String name, String value) {
 		super();
 		this.name = name;
