@@ -34,8 +34,7 @@
 			}
 		],
 		"_class": "edu.sunhacks.recyclehub.models.Product"
-	},
-	{
+	},{
 		"pid": "44000039035",
 		"productName": "150 GRAMS OJO COCONUT COOKIES",
 		"garbageGenerated": 0.5,
@@ -53,6 +52,7 @@
 		],
 		"_class": "edu.sunhacks.recyclehub.models.Product"
 	},
+	
 	{
 		"pid": "44000007492",
 		"productName": "5.2 OUNCES (NET) OREO COOKIE 5.25OZ",

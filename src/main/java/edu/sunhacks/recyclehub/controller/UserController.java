@@ -27,10 +27,11 @@ public class UserController {
         this.userRep = userRep;
     }
 
+    @CrossOrigin(origins="http://localhost:8080")
     @RequestMapping(value = "/authenticateUser", method = RequestMethod.POST, produces = "text/plain")
     public @ResponseBody String authenticateUser(@RequestBody String json, HttpServletRequest request, HttpServletResponse response) {
+    	System.err.println(json);
         boolean responseDB = false;
-
         try {
 
             ObjectMapper mapper = new ObjectMapper();
