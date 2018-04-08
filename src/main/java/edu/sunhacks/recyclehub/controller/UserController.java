@@ -122,6 +122,7 @@ public class UserController {
             for(ProductDetails prodDet: stackProdList){
                 ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
                 prodD.setPid(prodDet.getPid());
+                prodD.setProductName(prodDet.getProductName());
                 prodD.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
                 prodD.setAmount(prodD.getAmount()+prodDet.getAmount());
                 prodIdToProdDetailsMap.put(prodDet.getPid(), prodD);
@@ -138,6 +139,7 @@ public class UserController {
                     while (stackIter.hasNext()) {
                         ProductDetails prodDet = (ProductDetails) stackIter.next();
                         ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                        prodDet.setProductName(prodD.getProductName());
                         prodDet.setQuantity(prodD.getQuantity() + prodDet.getQuantity());
                         prodDet.setAmount(prodD.getAmount() + prodDet.getAmount());
                         prodIdToProdDetailsMap.remove(prodDet.getPid());
@@ -163,6 +165,7 @@ public class UserController {
         for(ProductDetails prodDet: stackProdList){
             ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
             prodD.setPid(prodDet.getPid());
+            prodD.setProductName(prodDet.getProductName());
             prodD.setQuantity(prodD.getQuantity()+prodDet.getQuantity());
             prodD.setAmount(prodD.getAmount()+prodDet.getAmount());
             prodIdToProdDetailsMap.put(prodDet.getPid(), prodD);
@@ -176,6 +179,7 @@ public class UserController {
                 while(stackIter.hasNext()){
                     ProductDetails prodDet = (ProductDetails)stackIter.next();
                     ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                    prodDet.setProductName(prodD.getProductName());
                     prodDet.setQuantity(prodDet.getQuantity() - prodD.getQuantity());
                     prodDet.setAmount(prodDet.getAmount() - prodD.getAmount());
                     if(prodDet.getQuantity()<=0){
@@ -186,6 +190,7 @@ public class UserController {
                 while(recycleIter.hasNext()){
                     ProductDetails prodDet = (ProductDetails)recycleIter.next();
                     ProductDetails prodD = prodIdToProdDetailsMap.getOrDefault(prodDet.getPid(), new ProductDetails());
+                    prodDet.setProductName(prodD.getProductName());
                     prodDet.setQuantity(prodDet.getQuantity() + prodD.getQuantity());
                     prodDet.setAmount(prodDet.getAmount() + prodD.getAmount());
                     prodIdToProdDetailsMap.remove(prodDet.getPid());
@@ -243,6 +248,7 @@ public class UserController {
 
                 if(prodList.size() > 0){
                     Product prod = prodList.get(0);
+                    map.put("productName", prod.getProductName());
                     map.put("garbageGenerated", Double.parseDouble(prod.getGarbageGenerated()) * quantity);
                     map.put("recycleableGarbage", Double.parseDouble(prod.getRecycleableGarbage()) * quantity);
                     map.put("landfillGarbage", Double.parseDouble(prod.getLandfillGarbage()) * quantity);
